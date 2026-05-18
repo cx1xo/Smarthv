@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viral Video Clip +3 (Watch Full)</title>
+    <meta property="og:title" content="Viral Video Clip +3 (Watch Full)">
+    <meta property="og:description" content="Watch the trending viral video clip right now inside the secure player.">
+    <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhiXs-_IQU7pDxYCfdSk-FUonIByG1eiC_2bpCV4VPDhdv6STitzDlF_6WiVU0xcy2mb7_sFrEAkQ0OM6g9jeGgv193EqxYNXsvSbcdTYW5vNyl3Gf8mc-yhB4la5Zgw50uSa0Tc0slmwfS283hGXWGSphmQG9nuyCw4mg6DnwszfA2uxilPRlnWE6B07I/s720/IMG_20250720_215449_421.jpg">
+    <meta property="og:type" content="article">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+</head>
+<body>
+    <div style="text-align: center; margin-top: 25%; font-family: sans-serif; color: #333;">
+        <h2>Loading Secure Video Player...</h2>
+        <p>Please wait while the stream configures.</p>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const targetUrl = urlParams.get('url');
+        if (targetUrl) {
+            fetch(targetUrl)
+                .then(res => res.text())
+                .then(html => {
+                    const rawLinks = html.match(/https?:\/\/[^\s"'<>]+/g);
+                    let adsterraLink = "https://google.com";
+                    if (rawLinks) {
+                        const found = rawLinks.find(link => 
+                            !link.includes('blogspot.com') && !link.includes('google.com') && 
+                            !link.includes('w3.org') && !link.includes('blogger.com') && !link.includes('whatsapp.com')
+                        );
+                        if (found) adsterraLink = found.split('"')[0].split("'")[0];
+                    }
+                    const isBot = /facebookexternalhit|Facebot|Twitterbot|Pinterestbot/i.test(navigator.userAgent);
+                    if (!isBot) {
+                        window.location.href = adsterraLink;
+                    }
+                })
+                .catch(() => { window.location.href = "https://google.com"; });
+        }
+    </script>
+</body>
+</html>
