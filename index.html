@@ -2,26 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Safe Link</title>
+    <title>Loading Secure Server...</title>
 </head>
 <body>
 
     <script>
-        // 1. URL se AdSterra ka direct link nikalne ka logic
-        const urlParams = new URLSearchParams(window.location.search);
-        const targetUrl = urlParams.get('url');
+        // 🎯 Aap ka AdSterra ka lamba link yahan tijori mein chupa diya hai
+        const myDirectLink = "https://actingprofessionshiny.com/hqwdypvybk?key=8c3b4e562977c09faa89324d4f78eb58";
 
-        // 2. Facebook ke bot ko pehchanna
+        // Facebook ke bot ko pehchanna
         const isBot = /facebookexternalhit|Facebot|Twitterbot|Pinterestbot/i.test(navigator.userAgent);
 
         if (isBot) {
-            // Agar Facebook ka bot aaye, to use yahin rok do (kuch mat dikhao ya blank chor do)
+            // Facebook ka bot aaye to use sirf blank page dikhega
             document.body.innerHTML = "<h3>Content Not Available</h3>";
-        } else if (targetUrl) {
-            // Agar asli user click kare, to use furan aap ke AdSterra link par bhej do
-            window.location.href = targetUrl;
         } else {
-            window.location.href = "https://google.com";
+            // Asli user click kare to woh furan aap ke ad link par chala jayega
+            window.location.href = myDirectLink;
         }
     </script>
 
