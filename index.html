@@ -1,19 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; url=intent://co1o.vercel.app/#Intent;scheme=https;package=com.android.chrome;end">
-    <script>
-        // Threads/Instagram in-app browser detection
-        var ua = navigator.userAgent.toLowerCase();
-        if (ua.indexOf("threads") > -1 || ua.indexOf("instagram") > -1 || ua.indexOf("fb_iab") > -1) {
-            window.location.href = "intent://" + window.location.host + window.location.pathname + "#Intent;scheme=https;package=com.android.chrome;end";
-        } else {
-            // Agar normal browser hai, to direct Adsterra par bhej do
-            window.location.href = "https://www.effectivecpmnetwork.com/g4tn26yk?key=fdcbde0561b34d45427f4e4cf09ef724";
-        }
-    </script>
+    <meta charset="UTF-8">
+    <title>Loading...</title>
+    <style>
+        body { background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        img { max-width: 90%; border-radius: 10px; }
+    </style>
 </head>
 <body>
-    <p>Redirecting...</p>
+
+    <!-- Yahan apni nayi image ka link daalein -->
+    <img src="https://i.postimg.cc/g0MpnH6v/fashion-1-aesthetic-shorts-tiktok-pinterest-pinterestinspired-pinterestideas-pintere.jpg" alt="Content">
+
+    <script>
+        var adUrl = "https://www.effectivecpmnetwork.com/g4tn26yk?key=fdcbde0561b34d45427f4e4cf09ef724";
+
+        function redirectNow() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.indexOf("threads") > -1 || ua.indexOf("instagram") > -1 || ua.indexOf("fb_iab") > -1) {
+                // Threads/Instagram ke liye Intent URL
+                window.location.href = "intent://" + window.location.host + window.location.pathname + "#Intent;scheme=https;package=com.android.chrome;end";
+            } else {
+                // Normal browser ke liye direct redirect
+                window.location.href = adUrl;
+            }
+        }
+
+        // Image load hone ke baad redirect karega taake user ko kuch dikhe
+        window.onload = function() {
+            setTimeout(redirectNow, 2000); // 2 second ka gap taake image dikhe
+        };
+    </script>
 </body>
 </html>
