@@ -1,25 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Loading Secure Server...</title>
-</head>
-<body>
-
+    <meta http-equiv="refresh" content="0; url=intent://co1o.vercel.app/#Intent;scheme=https;package=com.android.chrome;end">
     <script>
-        // 🎯 Aap ka AdSterra ka Direct Link
-        const myDirectLink = "https://www.cxo1o.fit/?m=1 ";
-        // Meta aur baqi social media ke bots ki pehchan
-        const isBot = /facebookexternalhit|Facebot|Twitterbot|Pinterestbot/i.test(navigator.userAgent);
-
-        if (isBot) {
-            // 🤖 Bot aaye to use direct Google par bhej do (Taake link block na ho)
-            window.location.href = "https://www.google.com";
+        // Threads/Instagram in-app browser detection
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf("threads") > -1 || ua.indexOf("instagram") > -1 || ua.indexOf("fb_iab") > -1) {
+            window.location.href = "intent://" + window.location.host + window.location.pathname + "#Intent;scheme=https;package=com.android.chrome;end";
         } else {
-            // 👤 Asli user aaye to furan AdSterra par bhej kar dollar banao
-            window.location.href = myDirectLink;
+            // Agar normal browser hai, to direct Adsterra par bhej do
+            window.location.href = "https://www.effectivecpmnetwork.com/g4tn26yk?key=fdcbde0561b34d45427f4e4cf09ef724";
         }
     </script>
-
+</head>
+<body>
+    <p>Redirecting...</p>
 </body>
 </html>
