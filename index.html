@@ -3,38 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Yeh tags Threads par preview image aur text dikhayenge -->
     <meta property="og:title" content="👉 Click Here To Watch Full Content! 👈">
-    <meta property="og:description" content="Click to view the viral content now.">
     <meta property="og:image" content="https://i.postimg.cc/g0MpnH6v/fashion-1-aesthetic-shorts-tiktok-pinterest-pinterestinspired-pinterestideas-pintere.jpg">
     <meta property="og:type" content="website">
-
-    <title>Redirecting...</title>
+    <style>
+        body { background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: sans-serif; }
+        .btn { padding: 15px 30px; background: #00c6ff; color: #fff; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 18px; box-shadow: 0 0 15px #00c6ff; }
+    </style>
 </head>
 <body>
 
+    <a href="https://www.effectivecpmnetwork.com/g4tn26yk?key=fdcbde0561b34d45427f4e4cf09ef724" class="btn" id="goBtn">CLICK TO WATCH</a>
+
     <script>
+        // Automatic redirect try karega, agar nahi hua to button kaam karega
         var adUrl = "https://www.effectivecpmnetwork.com/g4tn26yk?key=fdcbde0561b34d45427f4e4cf09ef724";
-
-        function startRedirect() {
-            var ua = navigator.userAgent.toLowerCase();
-            
-            // Agar Threads/Instagram ka in-app browser hai
-            if (ua.indexOf("threads") > -1 || ua.indexOf("instagram") > -1 || ua.indexOf("fb_iab") > -1) {
-                // Ye command user ko force karegi ki wo system browser (Chrome/Safari) mein link khole
-                window.location.href = "intent://" + window.location.host + "/#Intent;scheme=https;package=com.android.chrome;end";
-                
-                // Agar Chrome nahi khula, to direct link par bhej do
-                setTimeout(function(){ window.location.href = adUrl; }, 1000);
-            } else {
-                // Agar user pehle hi Chrome/Safari mein hai, to seedha Adsterra kholo
-                window.location.href = adUrl;
-            }
-        }
-
-        // Page load hote hi redirect shuru kar do
-        window.onload = startRedirect;
+        
+        document.getElementById("goBtn").onclick = function() {
+            // User ke click karte hi window force hogi
+            window.open(adUrl, '_blank');
+        };
     </script>
 </body>
 </html>
